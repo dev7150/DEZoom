@@ -1,0 +1,10 @@
+Select max(tip_amount),tzd."Zone",tzp."Zone"
+from green_taxi_data gtd
+join taxi_zone tzp
+on gtd."PULocationID" = tzp."LocationID"
+join taxi_zone tzd
+on gtd."DOLocationID" = tzd."LocationID"
+where tzp."Zone" = 'Astoria'
+group by 2,3
+order by 1 desc
+limit 1
