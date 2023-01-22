@@ -8,7 +8,7 @@ from time import time
 
 import pandas as pd
 from sqlalchemy import create_engine
-
+# pip install psycopg2
 
 def main(params):
     user = params.user
